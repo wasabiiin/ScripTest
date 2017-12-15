@@ -1,0 +1,495 @@
+
+
+4-2　変数を使ってみよう
+
+public  class Test : MonoBehaviour {
+
+    //Use this for initailaization
+    private void Start()
+    {
+        //変数の宣言
+        int score;
+        //変数の代入
+        score = 150;
+        //コンソールに変数の中身を表示
+        Debug.Log(score);
+    }
+
+    //Update is called once per frame
+    private void Update()
+    {
+        
+    }
+}
+
+
+4-3　変数を使って計算しよう
+public  class Test : MonoBehaviour {
+
+    //Use this for initailaization
+    private void Start()
+    {
+        //変数を初期化する
+        int a = 3;
+        int b = 4;
+        //変数aとbの合計値を変数cに代入する
+        int c = a + b;
+        //変数cを表示する
+        Debug.Log(c);
+    
+    }
+    //Update is called once per frame
+    private void Update()
+    {
+        
+    }
+}
+
+
+5.制御文
+5-1　if文を使おう
+public  class Test : MonoBehaviour {
+
+    //Use this for initailaization
+    private void Start()
+    {
+        int money = 200;
+
+        if (money >= 100)
+        {
+            //moneyの値が100以上の場合、文字列を表示する
+            Debug.Log("ポーションを買う");
+        }
+    }
+    //Update is called once per frame
+    private void Update()
+    {
+        
+    }
+}
+
+
+
+
+5-2　if～else文を使おう
+public  class Test : MonoBehaviour {
+
+    //Use this for initailaization
+    private void Start()
+    {
+        //moneyを50で初期化する
+        int money = 50;
+
+        if (money >= 100)
+        {
+            //moneyが100以上だった場合
+            Debug.Log("ポーションを買う");
+        } else {
+            //moneyが100未満だった場合
+            Debug.Log("武器を売る");
+
+        }
+    }
+    //Update is called once per frame
+    private void Update()
+    {
+        
+    }
+}
+
+
+
+5-3　if～else if～else文を使おう
+public  class Test : MonoBehaviour {
+
+    //Use this for initailaization
+    private void Start()
+    {
+        //moneyを100で初期化する
+        int money = 100;
+        if (money <= 50) { 
+            //moneyが50以下だった場合の処理
+            Debug.Log ("武器を売る");
+        } else if( money >= 200) { 
+                //moneyが200以上だった場合の処理
+                Debug.Log("武器を買う");
+        } else {
+            //それ以外の場合の処理
+            Debug.Log("ポーションを買う");
+            }
+      
+        }
+
+    //Update is called once per frame
+    private void Update()
+    {
+        
+    }
+
+}
+
+
+
+5-4　三項演算子
+public  class Test : MonoBehaviour {
+
+    //Use this for initailaization
+    private void Start()
+    {
+        //numを1で初期化する
+        int num = 1;
+        //valに代入する値を条件によって変える(三項演算子)
+        int val = (num == 1) ? -100 : 100;
+        //valの値を表示する
+        Debug.Log(val);
+    }
+    //Update is called once per frame
+    private void Update()
+    {
+        
+    }
+
+}
+
+
+
+5-5　スコープ
+public  class Test : MonoBehaviour {
+
+    //Use this for initailaization
+    private void Start()
+    {
+        int a = 3;
+        if (a == 3)
+        {
+            int b = 5;
+            Debug.Log(b);
+        }
+    }
+    //Update is called once per frame
+    private void Update()
+    {
+        
+    }
+
+}
+
+
+
+6 for文
+
+public  class Test : MonoBehaviour {
+
+    //Use this for initailaization
+    private void Start()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            Debug.Log(i);
+        }
+    }
+    //Update is called once per frame
+    private void Update()
+    {
+        
+    }
+
+}
+
+
+6-1　合計値を求めるスクリプト
+public class Test : MonoBehaviour {
+
+    //Use this for initailaization
+    private void Start()
+    {
+        int sum = 0;
+        for (int i = 1; i <= 10; i++)
+        {
+            sum += i;
+        }
+        Debug.Log(sum);
+
+    }
+
+    void Update()
+    {
+    }
+
+
+    }
+
+
+
+
+7-3　配列を使ったスクリプト
+public class Test : MonoBehaviour {
+
+    //Use this for initailaization
+    private void Start()
+    {
+        int[] points = new int[5];
+
+        points[0] = 30;
+        points[1] = 20;
+        points[2] = 50;
+        points[3] = 10;
+        points[4] = 80;
+
+        for (int i = 0; i < 5; i++)
+        {
+            Debug.Log(points[i]);
+
+        }
+    }
+    void Update()
+    {
+    }
+
+    }
+
+
+
+
+7-4　配列の応用的な書き方
+    private void Start()
+    {
+        int[] points = {30, 20, 50, 10, 80, 15, 60, 100 };
+        for (int i = 0; i < points.Length; i++)
+        {
+            if (points[i] >= 50)
+            {
+                Debug.Log(points[i]);
+            }
+        }
+    }
+    void Update()
+    {
+    }
+
+
+    }
+
+
+
+8
+
+
+
+Lesson4の課題をしています。
+
+課題内容
+1.要素の個数が5の、int型の配列arrayを宣言して
+　好きな値で初期化してください
+2.配列の各要素の値を順番に表示してください
+3.for文を使い、配列の各要素の値を逆順に表示してください
+
+課題1+2のスクリプト、
+1+3のスクリプトはかけたのですが、
+1+2+3をつなげることができずにいます。。
+
+どうすれば、どこを参照すればよいでしょうか。
+
+
+==================================================
+
+課題内容
+1.要素の個数が5の、int型の配列arrayを宣言して
+　好きな値で初期化してください
+┗
+
+2.配列の各要素の値を順番に表示してください
+3.for文を使い、配列の各要素の値を逆順に表示してください
+
+
+//1+2のスクリプト
+public class Test : MonoBehaviour {
+
+    //Use this for initailaization
+    private void Start()
+    {
+        int[] array = { 10, 20, 30, 40, 50 };
+        for (int i = 0; i < array.Length; i++)
+        {
+            Debug.Log(array[i]);
+        }
+
+    }
+    void Update()
+    {
+    }
+
+
+}
+
+
+//1+3のスクリプト
+public class Test : MonoBehaviour
+{
+
+    //Use this for initailaization
+    private void Start()
+    {
+        int[] array = { 10, 20, 30, 40, 50 };
+        for (int i = array.Length - 1; 0<=i; i--)
+        {
+            Debug.Log(array[i]);
+        }
+    }
+
+
+    void Update()
+    {
+
+    }
+
+}
+
+
+
+
+
+変数 intには（）がない
+関数には（）がつく
+
+if ()で条件内容
+{}条件の処理内容をしめす
+
+
+
+
+
+
+
+
+//1+2+3のスクリプト
+public class Test : MonoBehaviour {
+
+    //Use this for initailaization
+    private void Start()
+    {
+        int[] array = { 10, 20, 30, 40, 50 };
+        for (int i = 0; i < array.Length; i++)
+  
+        for (int i = array.Length - 1; 0<=i; i--)
+        {
+            Debug.Log(array[i]);
+        }
+    }
+
+
+    void Update()
+    {
+
+    }
+
+}
+
+
+
+
+
+Lesson5にて
+
+Build Settings＞「Switch Platform」ボタンが非アクティブでクリックできません。
+どうすればいいでしょうか。
+私の作業環境はwindowsなのでAndroidを選択したくおります。
+
+
+
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    //Use this for initailaization
+    private void Start()
+    {
+        int[] array = { 10, 20, 30, 40, 50 };
+        for (int i = 0; i < array.Length; i++)
+
+            for (int j = array.Length - 1; 0 <= j; j--)
+            {
+                Debug.Log(array[i]);
+                Debug.Log(array[j]);
+            }
+    }
+
+
+    void Update()
+    {
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
